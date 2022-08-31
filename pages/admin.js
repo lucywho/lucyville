@@ -3,6 +3,7 @@ import { useRouter } from "next/router"
 import { useState } from "react"
 
 import Loading from "components/Loading"
+import Home from "components/Home"
 
 export default function Admin() {
     const [name, setName] = useState("")
@@ -89,6 +90,7 @@ export default function Admin() {
                     Add item
                 </button>
             </form>
+            <Home />
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import prisma from "lib/prisma"
+import Link from "next/link"
 import { getItems } from "lib/data"
 
 export default function Home({ restaurants, hotels, thingsToDo, festivals }) {
@@ -17,7 +18,11 @@ export default function Home({ restaurants, hotels, thingsToDo, festivals }) {
 
                             <ol className="mt-4 list-inside list-decimal">
                                 {restaurants.map((item, index) => (
-                                    <li key={index}>{item.name}</li>
+                                    <Link href={`/${item.id}`} key={index}>
+                                        <a className="block cursor-pointer hover:underline">
+                                            {item.name}
+                                        </a>
+                                    </Link>
                                 ))}
                             </ol>
                         </div>
@@ -28,7 +33,11 @@ export default function Home({ restaurants, hotels, thingsToDo, festivals }) {
 
                             <ol className="mt-4 list-inside list-decimal">
                                 {hotels.map((item, index) => (
-                                    <li key={index}>{item.name}</li>
+                                    <Link href={`/${item.id}`} key={index}>
+                                        <a className="block cursor-pointer hover:underline">
+                                            {item.name}
+                                        </a>
+                                    </Link>
                                 ))}
                             </ol>
                         </div>
@@ -39,7 +48,11 @@ export default function Home({ restaurants, hotels, thingsToDo, festivals }) {
 
                             <ol className="mt-4 list-inside list-decimal">
                                 {thingsToDo.map((item, index) => (
-                                    <li key={index}>{item.name}</li>
+                                    <Link href={`/${item.id}`} key={index}>
+                                        <a className="block cursor-pointer hover:underline">
+                                            {item.name}
+                                        </a>
+                                    </Link>
                                 ))}
                             </ol>
                         </div>
@@ -50,7 +63,11 @@ export default function Home({ restaurants, hotels, thingsToDo, festivals }) {
 
                             <ol className="mt-4 list-inside list-decimal">
                                 {festivals.map((item, index) => (
-                                    <li key={index}>{item.name}</li>
+                                    <Link href={`/${item.id}`} key={index}>
+                                        <a className="block cursor-pointer hover:underline">
+                                            {item.name}
+                                        </a>
+                                    </Link>
                                 ))}
                             </ol>
                         </div>
