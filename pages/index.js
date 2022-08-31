@@ -3,7 +3,6 @@ import Link from "next/link"
 import { getItems } from "lib/data"
 
 export default function Home({ restaurants, hotels, thingsToDo, festivals }) {
-    console.log(restaurants, hotels)
     return (
         <>
             <div className="text-center ">
